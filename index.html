@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Math Game</h1>
+      <div class="content">
+        <div class="game-options-container">
+          <div class="game-options" onclick="selectGame(10, 0)">
+            <div class="option">10 &nbsp;Questions</div>
+            <div class="record">
+              <div>Best Score</div>
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+          <div class="game-options" onclick="selectGame(25, 1)">
+            <div class="option">25 &nbsp;Questions</div>
+            <div class="record">
+              <div>Best Score</div>
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+          <div class="game-options" onclick="selectGame(50, 2)">
+            <div class="option">50 &nbsp;Questions</div>
+            <div class="record">
+              <div>Best Score</div>
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+          <div class="game-options" onclick="selectGame(99, 3)">
+            <div class="option">99 &nbsp;Questions</div>
+            <div class="record">
+              <div>Best Score</div>
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+        </div>
+        <div class="count-down hidden">3</div>
+        <div class="result hidden">
+          <h1>Your Time</h1>
+          <h1 id="duration">13.2s</h1>
+          <h1 id="base-time">Base Time:12s</h1>
+          <h1 id="penalty">Penalty:+3s</h1>
+        </div>
+        <div class="questions hidden" id="questions">
+          <table class="table"></table>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="startRound">Start Round</button>
+        <div class="answer hidden" id="answer">
+          <button class="wrong" onclick="selectAnswer('wrong')">Wrong</button>
+          <button class="right" onclick="selectAnswer('right')">Right</button>
+        </div>
+        <button class="play-again hidden">Play Again</button>
+      </div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+  </body>
+</html>
